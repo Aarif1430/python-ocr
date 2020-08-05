@@ -12,3 +12,6 @@ tensorflow==2.3.0
 Werkzeug==0.11.15
 MarkupSafe==1.0
 itsdangerous==0.24
+scipy==1.4.1
+tensorboard==2.3.0
+pandas==1.0.5
