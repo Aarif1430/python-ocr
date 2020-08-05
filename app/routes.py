@@ -2,7 +2,6 @@ import base64
 import numpy as np
 from PIL import Image
 from flask import render_template, request, jsonify
-from cv2 import resize, INTER_AREA
 from app import app
 from model.neural_net import NeuralNetwork, alphabets_mapper
 
@@ -17,6 +16,15 @@ def index():
     return render_template('index.html', the_title='Character Recognition using CNN')
 
 
+def naiveInterp2D(M, newx, newy):
+    result = np.zeros((newx,newy))
+    for i in range(M.shape[0]):
+        for j in range(M.shape[1]):
+            indx = int(i*newx / M.shape[0])
+            indy = int(j*newy / M.shape[1])
+            result[indx,indy] +=M[i,j]
+    return result
+
 @app.route('/get_canvas_data', methods=['GET', 'POST'])
 def process_image_data():
     jpgtxt = request.args.get('img', 0, type=str)
@@ -29,8 +37,7 @@ def process_image_data():
     img = Image.open('temp.jpg').convert('RGBA')
     im = np.array(img)
     im = im.reshape(im.shape[0], (im.shape[1]*im.shape[2]))
-
-    resized = np.asarray(255.0 - (np.float32(resize(im, (20,20), interpolation=INTER_AREA).reshape(20, 20) * 255)))
+    resized = np.asarray(255.0 - (np.float32(naiveInterp2D(im,20,20)).reshape(20, 20) * 255))
     fn = lambda x: 0 if x < 200 else 255
     vfunc = np.vectorize(fn)
     grayed = vfunc(resized)
