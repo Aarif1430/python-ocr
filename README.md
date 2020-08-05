@@ -8,3 +8,8 @@ The project is a simple flask applications where user can write characters on UI
 - Python
 - Pip
 - virtualenv
+# OCR in action
+
+Character                  |  Digit
+:-------------------------:|:-------------------------:
+![](https://github.com/Aarif1430/python-ocr/blob/master/flask/static/images/w.png)  |  ![](https://github.com/Aarif1430/python-ocr/blob/master/flask/static/images/3.png)
