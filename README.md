@@ -12,4 +12,4 @@ The project is a simple flask applications where user can write characters on UI
 
 Character                  |  Digit
 :-------------------------:|:-------------------------:
-![](https://github.com/Aarif1430/python-ocr/blob/master/src/static/images/w.png)  |  ![](https://github.com/Aarif1430/python-ocr/blob/master/src/static/images/3.png)
+![](https://github.com/Aarif1430/python-ocr/blob/master/app/static/images/w.png)  |  ![](https://github.com/Aarif1430/python-ocr/blob/master/app/static/images/3.png)

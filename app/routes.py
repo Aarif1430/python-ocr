@@ -3,7 +3,7 @@ from PIL import Image
 import base64
 from model.neural_net import *
 import cv2
-from src import app
+from app import app
 #
 # app = Flask(__name__)
 
