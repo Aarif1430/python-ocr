@@ -1,11 +1,8 @@
-
 import numpy as np
-import pandas as pd
-import tensorflow as tf
-from sklearn.model_selection import train_test_split
-from tensorflow.keras import layers
-from tensorflow.keras import models
-from tensorflow.keras.utils import to_categorical
+import keras
+from keras import layers
+from keras import models
+from keras.utils import to_categorical
 
 alphabets_mapper = {10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F', 16: 'G', 17: 'H', 18: 'I', 19: 'J',
                         20: 'K', 21: 'L', 22: 'M', 23: 'N', 24: 'O', 25: 'P', 26: 'Q', 27: 'R', 28: 'S', 29: 'T', 30: 'U',
@@ -14,6 +11,8 @@ alphabets_mapper = {10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F', 16: 'G
 
 
 def load_sample():
+    from sklearn.model_selection import train_test_split
+    import pandas as pd
     datafile = '../data/data.csv'
     dataset = pd.read_csv(datafile)
     X = dataset.drop(['labels', 'Unnamed: 0'], axis=1).values
@@ -68,7 +67,7 @@ class NeuralNetwork(object):
         self.model.save('conv_cnn_2.h5')
 
     def pretrained_model(self, saved_model):
-        predtrained_model = tf.keras.models.load_model(saved_model)
+        predtrained_model = keras.models.load_model(saved_model)
         return predtrained_model
 
 
