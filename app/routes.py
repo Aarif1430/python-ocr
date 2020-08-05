@@ -1,9 +1,14 @@
-from flask import Flask, render_template, request, jsonify
-from PIL import Image
 import base64
-from model.neural_net import *
+
 import cv2
+import numpy as np
+from PIL import Image
+from flask import render_template, request, jsonify
+
 from app import app
+from model.neural_net import NeuralNetwork, alphabets_mapper
+
+
 #
 # app = Flask(__name__)
 
