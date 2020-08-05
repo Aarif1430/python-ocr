@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- to be filled by the Python script -->
+<h1>{{ the_title }}</h1>
+<script type="text/javascript">
+    // Variables to record the (x,y) coordinate pairs traversed by the mouse cursor
+    // and the state (pressed, unpressed) of the mouse button
+    var moves = new Array();
+    var pressed;
+    function initCanvas() {
+        // We will insert here the canvas initialization code
+    }
+    function redraw() {
+        // function to draw in the canvas the mouse movements previously
+        // collected in the 'moves' variable
+    }
+</script>
+<div align="center">
+        <canvas id="canvas" width="200" height="200" style="border:2px solid black"></canvas>
+        <br /><br />
+        <button onclick="javascript:clearArea();return false;">Clear</button>
+        <button onclick="upload();">Predict</button>
+    <br>
+    <h3 id="result"></h3>
+    </div>
+<p>This project is a part of my learning about neural networks and is heavily inspired by ,
+    <a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="noopener noreferrer"> Micheal Nelson's book. </a></p>
+<img src="{{ url_for('static', filename='images/cnn.png') }}">
+<p> I have also written blog post on basic of neural networks, Please follow link,
+    <a href="https://malikaarif.netlify.app/blog/basics_of_neural_networks/" target="_blank" rel="noopener noreferrer"> Basics of Neural Networks, An Intuitive Introduction to Neural Networks. </a></p>
+{% endblock %}
+
+# handwritten-character-recognition
+
+This a Deep learning AI system which recognize handwritten characters, Here I use chars74k data-set for training the model
+
+### Prerequisites:
+
+- Python
+- anaconda
+- Pip
+- virtualenv
+
+Download handwritten dataset from [here](http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/EnglishHnd.tgz)
+
+It has only 55 samples for each class, so I have written script to create duplicate images with different backgroud color.
+
+Clone this repository and create a virtualenv using below command
+```
+virtualenv venv
+source venv/bin/activate
+```
+Navigate to cloned directory
+```
+pip install -r requirements.txt
+```
+
+Create duplicate images for dataset
+```
+python generate_dataset.py
+```
+
+Open notebook
+```
+jupyter notebook
+```
+
+
