@@ -2,7 +2,7 @@ import base64
 import numpy as np
 from PIL import Image
 from flask import render_template, request, jsonify
-import cv2
+from cv2 import resize, INTER_AREA
 from app import app
 from model.neural_net import NeuralNetwork, alphabets_mapper
 
@@ -30,7 +30,7 @@ def process_image_data():
     im = np.array(img)
     im = im.reshape(im.shape[0], (im.shape[1]*im.shape[2]))
 
-    resized = np.asarray(255.0 - (np.float32(cv2.resize(im, (20,20), interpolation=cv2.INTER_AREA).reshape(20, 20) * 255)))
+    resized = np.asarray(255.0 - (np.float32(resize(im, (20,20), interpolation=INTER_AREA).reshape(20, 20) * 255)))
     fn = lambda x: 0 if x < 200 else 255
     vfunc = np.vectorize(fn)
     grayed = vfunc(resized)

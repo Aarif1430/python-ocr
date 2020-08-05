@@ -1,5 +1,4 @@
 import numpy as np
-import keras
 from keras import layers
 from keras import models
 from keras.utils import to_categorical
@@ -67,7 +66,7 @@ class NeuralNetwork(object):
         self.model.save('conv_cnn_2.h5')
 
     def pretrained_model(self, saved_model):
-        predtrained_model = keras.models.load_model(saved_model)
+        predtrained_model = models.load_model(saved_model)
         return predtrained_model
 
 

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4e6b888-43a6-46c4-8206-f5e941ac10a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/neural_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/neural_net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/temp.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/neural_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-319">
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="94">
+              <caret line="32" column="98" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="98" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -47,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="253">
               <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
@@ -121,6 +121,7 @@
       <find>np</find>
       <find>base64</find>
       <find>cv2</find>
+      <find>keras</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,8 +152,8 @@
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/app/static/js/jquery-3.5.1.min.js" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
-        <option value="$PROJECT_DIR$/model/neural_net.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/model/neural_net.py" />
         <option value="$PROJECT_DIR$/app/routes.py" />
       </list>
     </option>
@@ -269,7 +270,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="neural_net" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="routes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Character_Recoginition" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -277,11 +278,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/neural_net.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/routes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,10 +315,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.routes" />
         <item itemvalue="Python.neural_net (1)" />
         <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.neural_net" />
       </list>
     </recent_temporary>
   </component>
@@ -338,18 +339,18 @@
     <frame x="18" y="23" width="1406" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25330397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25330397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47984394" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47854355" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47854355" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899868" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.60988295" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.47984394" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32769832" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -373,7 +374,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model/neural_net.py</url>
-          <line>77</line>
+          <line>76</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
@@ -550,13 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/jquery-3.5.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -578,15 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/neural_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -596,15 +581,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="253">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/neural_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="94">
+          <caret line="32" column="98" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="98" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
