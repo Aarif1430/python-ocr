@@ -1,6 +1,4 @@
 import base64
-
-import cv2
 import numpy as np
 from PIL import Image
 from flask import render_template, request, jsonify
@@ -21,6 +19,7 @@ def index():
 
 @app.route('/get_canvas_data', methods=['GET', 'POST'])
 def process_image_data():
+    import cv2
     jpgtxt = request.args.get('img', 0, type=str)
     data = jpgtxt.split(',')[-1]
     data = base64.b64decode(data.encode('ascii'))
