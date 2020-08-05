@@ -7,13 +7,14 @@ from tensorflow.keras.utils import to_categorical
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-datafile = '../data/data.csv'
 alphabets_mapper = {10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F', 16: 'G', 17: 'H', 18: 'I', 19: 'J',
                         20: 'K', 21: 'L', 22: 'M', 23: 'N', 24: 'O', 25: 'P', 26: 'Q', 27: 'R', 28: 'S', 29: 'T', 30: 'U',
                         31: 'V', 32: 'W', 33: 'X', 34: 'Y', 35: 'Z', 36: '5star', 37: 'scribble', 38: 'triangle',
                         39: ':)',40: ':(', 0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'}
 
+
 def load_sample():
+    datafile = '../data/data.csv'
     dataset = pd.read_csv(datafile)
     X = dataset.drop(['labels', 'Unnamed: 0'], axis=1).values
     Y = dataset['labels'].values
@@ -34,14 +35,6 @@ def load_sample():
     return (x_train, y_train), (x_test, y_test)
 
 
-(train_images, train_labels), (test_images, test_labels) = load_sample()
-train_images = train_images.reshape(train_images.shape[0], 20, 20, 1)
-train_images = train_images.astype('float32')
-test_images = test_images.reshape(test_images.shape[0], 20, 20, 1)
-test_images = test_images.astype('float32')
-train_labels = to_categorical(train_labels)
-test_labels = to_categorical(test_labels)
-
 
 class NeuralNetwork(object):
 
@@ -57,11 +50,18 @@ class NeuralNetwork(object):
         self.model.add(layers.Dense(41, activation='softmax'))
 
     def train(self):
+        (train_images, train_labels), (test_images, test_labels) = load_sample()
+        train_images = train_images.reshape(train_images.shape[0], 20, 20, 1)
+        train_images = train_images.astype('float32')
+        test_images = test_images.reshape(test_images.shape[0], 20, 20, 1)
+        test_images = test_images.astype('float32')
+        train_labels = to_categorical(train_labels)
+        test_labels = to_categorical(test_labels)
         self.model.compile(optimizer='rmsprop',
                       loss='categorical_crossentropy',
                       metrics=['accuracy'])
         self.model.fit(train_images, train_labels, epochs=10, batch_size=64)
-        test_loss, test_acc = self.model.evaluate(train_images, train_labels)
+        test_loss, test_acc = self.model.evaluate(test_images, test_labels)
         print('Test accuracy:', test_acc)
 
     def save(self):
